@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    //Attempting to access a non-existent attribute
+    let x = document.getElementById("myDiv").getAttribute("data-nonexistent");
+    console.log(x); //Output: null.  No error thrown
+
+    //This will throw an error, however
+    // let y = document.getElementById("myDiv").nonExistentAttribute;
+    // console.log(y);
+
+  </script>
+</body>
+</html>
